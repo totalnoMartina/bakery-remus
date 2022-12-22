@@ -8,6 +8,7 @@ body {
     font-family: "Quicksand", sans-serif;
     font-size: 62.5%;
     font-size: 10px;
+    color: black;
 }
 
 /*-- Inspiration taken from abdo steif -->
@@ -63,7 +64,7 @@ body {
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     line-height: 65px;
     font-size: 2.4rem;
 }
