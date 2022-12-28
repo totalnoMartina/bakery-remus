@@ -9,6 +9,8 @@ body {
     font-size: 62.5%;
     font-size: 10px;
     color: black;
+    /* background-image: url(https://i.pinimg.com/564x/16/77/2c/16772c1b77783774c4907e0587e698cb.jpg); */
+    background-color: #FDF1F1;
 }
 
 /*-- Inspiration taken from abdo steif -->
@@ -33,12 +35,12 @@ body {
 
 .nav div.logo a {
     text-decoration: none;
-    color: #fff;
+    color: rgb(157, 18, 18);
     font-size: 2.5rem;
 }
 
 .nav div.logo a:hover {
-    color: #00E676;
+    color: #71250e;
 }
 
 .nav div.main_list {
@@ -64,7 +66,7 @@ body {
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: black;
+    color: #99cbdd;
     line-height: 65px;
     font-size: 2.4rem;
 }
@@ -79,7 +81,6 @@ body {
 .home {
     width: 100%;
     height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
     background-position: center top;
     background-size: cover;
 }
@@ -131,7 +132,7 @@ body {
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #111;
+        background-color: #103948;
         /*same background color of navbar*/
         background-position: center top;
     }
