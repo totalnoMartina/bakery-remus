@@ -4,6 +4,16 @@
 {% load static %}
 
 {% block content %}
-    <h1 class="display-4 text-success">It works! OakSmoke Bakery</h1>
-    <img href='media/oaksmokelogo.gif' class='rounded-circle'>
+<div class="container text-center">  
+<h1 class="display-4 text-success">It works! OakSmoke Bakery</h1>
+    <img href= {% static 'media/oaksmokelogo.gif'%} class='rounded-circle'>
+
+   <h1> Lights up your taste buds!</h1>
+   <hr>
+<h2>We deliver fresh gourmet sandwiches, bread, cakes and confectionery to your door in Dublin City!</h2>
+<h2> - Monday to Saturday from 10AM to 4PM.</h2>
+- Free deliveries for orders over €80.
+- Order two days in advance.
+- Minimum order €40.
+</div> 
 {% endblock %}
