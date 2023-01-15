@@ -1,4 +1,7 @@
-OakSmoke Bakery
+# OakSmoke Bakery
+
+![Home Page OakSmoke Bakery](media/home.png?raw=true)
+
 
 # Contents
 
@@ -41,6 +44,9 @@ The SME (Small or Medium Enterprizes) are able to order items for purchase and c
 ## Browser Compatibility
 
 ## Bugs and Issues
+
+In the begining superuser was unavailable, since Django was upgraded into Django 4 so it required a CSRF_TRUSTED_ORIGINS link for local website and deployed version, [here](https://8000-totalnomart-bakeryremus-y3c2hru6ikt.ws-eu82.gitpod.io) is where I found a solution easily.
+
 
 # Technologies Used
 
