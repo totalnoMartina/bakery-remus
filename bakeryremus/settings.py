@@ -33,7 +33,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = ['https://bakery-remus-sirghe.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://bakery-remus-sirghe.herokuapp.com',
+'https://8000-totalnomart-bakeryremus-y3c2hru6ikt.ws-eu82.gitpod.io']
 
 ALLOWED_HOSTS = ['localhost', 'bakery-remus-sirghe.herokuapp.com', 'https://bakery-remus-sirghe.herokuapp.com/']
 
@@ -86,6 +87,8 @@ TEMPLATES = [
         },
     },
 ]
+
+SITE_ID = 1
 
 WSGI_APPLICATION = 'bakeryremus.wsgi.application'
 
