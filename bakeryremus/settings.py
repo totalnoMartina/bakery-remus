@@ -33,16 +33,14 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'bakery-remus-sirghe.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = ['https://bakery-remus-sirghe.herokuapp.com']
+
+ALLOWED_HOSTS = ['localhost', 'bakery-remus-sirghe.herokuapp.com', 'https://bakery-remus-sirghe.herokuapp.com/']
 
  # Add Render.com URL to allowed hosts
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-
-
-CSRF_TRUSTED_ORIGINS = ['bakery-remus-sirghe.herokuapp.com', ]
-
 
 # Application definition
 
