@@ -1,0 +1,26 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  
+<h1 class="text-center">Items list</h1>
+<div class="row">
+
+{% for item in items %}
+
+<div class="bg-image hover-overlay ripple col-4">
+    <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/055.webp" style="width: 200px;" class="mx-auto" />
+    <a href="#!">
+      <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
+    </a>{{item}}
+                <hr>
+            </div>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+</div>
+{% endfor %}
+{% endblock %}
