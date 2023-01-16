@@ -83,6 +83,18 @@ body {
 }
 
 
+.card {
+    width: 13em !important;
+}
+
+.card-img,
+.card-img-bottom,
+.card-img-top {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 70% !important;
+}
+
 
 
 
