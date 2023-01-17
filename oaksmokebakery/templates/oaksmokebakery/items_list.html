@@ -37,10 +37,11 @@
                         <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
                         <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
                         <li class="list-inline-item mx-0"><i class="fas fa-star-half-alt"></i></li>
-                    </ul>
-                    <p class="price mb-0">9,99 $</p>
+                    </ul>{% if item.price %}
+                    <p class="price mb-0">{{item.price}} €</p> {% endif %}
                 </div>
             </div>
+           
                {% endfor %}
         {% endblock %}
         </div>
@@ -75,6 +76,7 @@
                         <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
                         <li class="list-inline-item mx-0"><i class="fas fa-star"></i></li>
                     </ul>
+                    
                     <p class="price mb-0">12,99 $</p>
                 </div>
             </div>
