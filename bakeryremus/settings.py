@@ -20,6 +20,27 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
+from allauth.account import app_settings as allauth_settings
+from django.conf import settings
+
+
+TEMPLATE_EXTENSION = getattr(
+    settings, "ALLAUTH_2FA_TEMPLATE_EXTENSION", allauth_settings.TEMPLATE_EXTENSION
+)
+
+ALWAYS_REVEAL_BACKUP_TOKENS = bool(
+    getattr(settings, "ALLAUTH_2FA_ALWAYS_REVEAL_BACKUP_TOKENS", True)
+)
+
+REMOVE_SUCCESS_URL = getattr(
+    settings, "ALLAUTH_2FA_REMOVE_SUCCESS_URL", "two-factor-setup"
+)
+
+SETUP_SUCCESS_URL = getattr(
+    settings, "ALLAUTH_2FA_SETUP_SUCCESS_URL", "two-factor-backup-tokens"
+)
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -63,6 +84,12 @@ INSTALLED_APPS = [
     #     'allauth.socialaccount.providers.google',
     #     'allauth.socialaccount.providers.facebook', 
     'oaksmokebakery',
+    # otp authentication
+    'django_otp',
+    'django_otp.plugins.otp_totp',
+    'django_otp.plugins.otp_static',
+    # Enable two-factor auth.
+    'allauth_2fa',
 ]
 
 MIDDLEWARE = [
@@ -71,9 +98,18 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_otp.middleware.OTPMiddleware',  # new
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Reset login flow middleware. If this middleware is included, the login
+    # flow is reset if another page is loaded between login and successfully
+    # entering two-factor credentials.
+    'allauth_2fa.middleware.AllauthTwoFactorMiddleware',
+
 ]
+
+# Set the allauth adapter to be the 2FA adapter.
+ACCOUNT_ADAPTER = 'allauth_2fa.adapter.OTPAdapter'
 
 ROOT_URLCONF = 'bakeryremus.urls'
 

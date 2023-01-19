@@ -6,6 +6,10 @@
 
 {% block content %}
 
+{% if messages %}
+<div class="message-container"></div>
+{% endif %}
+
 <div class="container text-center index_transcript"> 
 <div ><img src="/media/oaksmokelogo.webp"></div>
    <h1 class="mt-3"><strong> Lights up your taste buds!</strong></h1>
@@ -16,7 +20,11 @@
 - Order two days in advance.
 - Minimum order €40.
 </div> 
+<br>
+<br>
+<br>
+<br>
 <div></div>
 
-
+ 
 {% endblock %}

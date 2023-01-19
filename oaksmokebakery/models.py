@@ -22,7 +22,6 @@ class Item(models.Model):
         return self.title
     
 
-
 class OrderItem(models.Model):
     """ Structure for the items order """
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
