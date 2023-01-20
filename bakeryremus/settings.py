@@ -55,8 +55,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://bakery-remus-sirghe.herokuapp.com',
-'https://8000-totalnomart-bakeryremus-y3c2hru6ikt.ws-eu82.gitpod.io',
-'https://8000-totalnomart-bakeryremus-y3c2hru6ikt.ws-eu82.gitpod.io/accounts/login']
+'https://8000-totalnomart-bakeryremus-y3c2hru6ikt.ws-eu83.gitpod.io/accounts/login',
+'https://8000-totalnomart-bakeryremus-y3c2hru6ikt.ws-eu83.gitpod.io']
 
 ALLOWED_HOSTS = ['localhost', 'bakery-remus-sirghe.herokuapp.com', 'https://bakery-remus-sirghe.herokuapp.com/']
 
